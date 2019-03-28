@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<rss version='2.0' xmlns:georss='http://www.georss.org/georss'
+     xmlns:gml='http://www.opengis.net/gml'
+     xmlns:atom='http://www.w3.org/2005/Atom'>
+    <channel>
+        <atom:link
+                href='http://www.seismescanada.rncan.gc.ca/index-fr.php?tpl_region=canada&amp;tpl_output=rss'
+                rel='self' type='application/rss+xml'/>
+        <title>Rapports sur les derniers séismes importants ( le Canada )
+        </title>
+        <link>
+            http://www.seismescanada.rncan.gc.ca/index-fr.php?tpl_region=canada&amp;tpl_output=rss
+        </link>
+        <description>Rapports sur les derniers séismes importants ( le Canada
+            )
+        </description>
+        <language>fr-CA</language>
+        <lastBuildDate>Mon, 01 Oct 2018 14:02:53 GMT</lastBuildDate>
+        <copyright>http://www.rncan.gc.ca/avis/10848</copyright>
+        <docs>http://www.seismescanada.rncan.gc.ca/rss/RSS_help-aide-fr.php
+        </docs>
+        <ttl>15</ttl>
+        <image>
+            <title>Rapports sur les derniers séismes importants ( le Canada )
+            </title>
+            <url>http://www.seismescanada.rncan.gc.ca/images/wmms.gif</url>
+            <link>
+                http://www.seismescanada.rncan.gc.ca/index-fr.php?tpl_region=canada&amp;tpl_output=rss
+            </link>
+        </image>
+
+        <item>
+            <title>Nouvelles Récentes</title>
+            <link>http://www.seismescanada.rncan.gc.ca/index-fr.php</link>
+            <guid isPermaLink='true'>
+                http://www.seismescanada.rncan.gc.ca/index-fr.php
+            </guid>
+            <pubDate>Sun, 09 Sep 2018 14:11:03 GMT</pubDate>
+            <description>dimanche, 9 septembre, 05h55 HP: un séisme resenti
+                s'est passé au détriot de Juan de Fuca, pres de Victoria. Plus
+                de détails ici.
+            </description>
+            <category>Rapports sur les derniers seismes</category>
+        </item>
+
+        <item>
+            <title>2018-09-29: M=3,1 - 32 km NNO de Yarmouth, NS - ressenti
+            </title>
+            <link>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180929.1332/index-fr.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180929.1332/index-fr.php
+            </guid>
+            <category>Rapport de séisme</category>
+            <description>
+                <![CDATA[Séisme 32 km NNO de Yarmouth, NS  - ressenti  <br/><b>magnitude: </b>3,1<br/><b>time: </b>2018-09-29 13:32 UT<br/><b>latitude: </b>44.11&deg;<br/><b>longitude: </b>-66.23&deg;]]></description>
+            <pubDate>Sat, 29 Sep 2018 13:32:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>44.11 -66.23</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+        <item>
+            <title>2018-09-09: M=3,1 - 27 km ESE de Victoria, BC</title>
+            <link>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180909.1255/index-fr.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180909.1255/index-fr.php
+            </guid>
+            <category>Rapport de séisme</category>
+            <description>
+                <![CDATA[Séisme 27 km ESE de Victoria, BC<br/><b>magnitude: </b>3,1<br/><b>time: </b>2018-09-09 12:55 UT<br/><b>latitude: </b>48.29&deg;<br/><b>longitude: </b>-123.06&deg;]]></description>
+            <pubDate>Sun, 09 Sep 2018 12:55:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>48.29 -123.06</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+        <item>
+            <title>2018-09-02: M=4,2 - 293 km ENE de Bonavista, NL - sous la
+                mer
+            </title>
+            <link>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180903.0143/index-fr.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180903.0143/index-fr.php
+            </guid>
+            <category>Rapport de séisme</category>
+            <description>
+                <![CDATA[Séisme 293 km ENE de Bonavista, NL - sous la mer  <br/><b>magnitude: </b>4,2<br/><b>time: </b>2018-09-03 01:43 UT<br/><b>latitude: </b>50.42&deg;<br/><b>longitude: </b>-50.10&deg;]]></description>
+            <pubDate>Mon, 03 Sep 2018 01:43:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>50.42 -50.10</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+        <item>
+            <title>2018-08-21: M=4,8 - 209 km O de Port Hardy, BC - sous la mer
+                - ressenti
+            </title>
+            <link>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180821.1310/index-fr.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180821.1310/index-fr.php
+            </guid>
+            <category>Rapport de séisme</category>
+            <description>
+                <![CDATA[Séisme 209 km O   de Port Hardy, BC - sous la mer   - ressenti  <br/><b>magnitude: </b>4,8<br/><b>time: </b>2018-08-21 13:10 UT<br/><b>latitude: </b>50.66&deg;<br/><b>longitude: </b>-130.47&deg;]]></description>
+            <pubDate>Tue, 21 Aug 2018 13:10:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>50.66 -130.47</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+        <item>
+            <title>2018-08-08: M=2,7 - 16 km SO de La Malbaie, QC - ressenti
+            </title>
+            <link>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180808.0850/index-fr.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.seismescanada.rncan.gc.ca/recent_eq/2018/20180808.0850/index-fr.php
+            </guid>
+            <category>Rapport de séisme</category>
+            <description>
+                <![CDATA[Séisme 16 km SO  de La Malbaie, QC - ressenti  <br/><b>magnitude: </b>2,7<br/><b>time: </b>2018-08-08 08:50 UT<br/><b>latitude: </b>47.54&deg;<br/><b>longitude: </b>-70.29&deg;]]></description>
+            <pubDate>Wed, 08 Aug 2018 08:50:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>47.54 -70.29</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+    </channel>
+</rss>
+

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<rss version='2.0' xmlns:georss='http://www.georss.org/georss'
+     xmlns:gml='http://www.opengis.net/gml'
+     xmlns:atom='http://www.w3.org/2005/Atom'>
+    <channel>
+        <atom:link
+                href='http://earthquakescanada.nrcan.gc.ca/index-en.php?tpl_region=canada&amp;tpl_output=rss'
+                rel='self' type='application/rss+xml'/>
+        <title>Recent significant earthquake reports ( Canada )</title>
+        <link>
+            http://earthquakescanada.nrcan.gc.ca/index-en.php?tpl_region=canada&amp;tpl_output=rss
+        </link>
+        <description>Recent significant earthquake reports ( Canada )
+        </description>
+        <language>en-CA</language>
+        <lastBuildDate>Mon, 01 Oct 2018 14:02:39 GMT</lastBuildDate>
+        <copyright>http://www.nrcan.gc.ca/terms-conditions/10847</copyright>
+        <docs>http://www.seismescanada.rncan.gc.ca/rss/RSS_help-aide-en.php
+        </docs>
+        <ttl>15</ttl>
+        <image>
+            <title>Recent significant earthquake reports ( Canada )</title>
+            <url>http://earthquakescanada.nrcan.gc.ca/images/wmms.gif</url>
+            <link>
+                http://earthquakescanada.nrcan.gc.ca/index-en.php?tpl_region=canada&amp;tpl_output=rss
+            </link>
+        </image>
+
+        <item>
+            <title>Breaking News</title>
+            <link>http://www.earthquakescanada.nrcan.gc.ca/index-en.php</link>
+            <guid isPermaLink='true'>
+                http://www.earthquakescanada.nrcan.gc.ca/index-en.php
+            </guid>
+            <pubDate>Sun, 09 Sep 2018 14:10:05 GMT</pubDate>
+            <description>Sunday, Sep 9th, 5:55PT: an earthquake has occurred in
+                the Strait of Juan de Fuca near Victoria, and felt in the area.
+                More details here.
+            </description>
+            <category>Breaking News</category>
+        </item>
+
+        <item>
+            <title>2018-09-29: M=3.1 - 32 km NNW of Yarmouth, NS - felt</title>
+            <link>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180929.1332/index-en.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180929.1332/index-en.php
+            </guid>
+            <category>Earthquake Report</category>
+            <description>
+                <![CDATA[Earthquake 32 km NNW of Yarmouth, NS  - felt  <br/><b>magnitude: </b>3.1<br/><b>time: </b>2018-09-29 13:32 UT<br/><b>latitude: </b>44.11&deg;<br/><b>longitude: </b>-66.23&deg;]]></description>
+            <pubDate>Sat, 29 Sep 2018 13:32:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>44.11 -66.23</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+        <item>
+            <title>2018-09-09: M=3.1 - 27 km ESE of Victoria, BC</title>
+            <link>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180909.1255/index-en.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180909.1255/index-en.php
+            </guid>
+            <category>Earthquake Report</category>
+            <description>
+                <![CDATA[Earthquake 27 km ESE of Victoria, BC<br/><b>magnitude: </b>3.1<br/><b>time: </b>2018-09-09 12:55 UT<br/><b>latitude: </b>48.29&deg;<br/><b>longitude: </b>-123.06&deg;]]></description>
+            <pubDate>Sun, 09 Sep 2018 12:55:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>48.29 -123.06</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+        <item>
+            <title>2018-09-02: M=4.2 - 293 km ENE of Bonavista, NL - offshore
+            </title>
+            <link>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180903.0143/index-en.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180903.0143/index-en.php
+            </guid>
+            <category>Earthquake Report</category>
+            <description>
+                <![CDATA[Earthquake 293 km ENE of Bonavista, NL - offshore  <br/><b>magnitude: </b>4.2<br/><b>time: </b>2018-09-03 01:43 UT<br/><b>latitude: </b>50.42&deg;<br/><b>longitude: </b>-50.10&deg;]]></description>
+            <pubDate>Mon, 03 Sep 2018 01:43:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>50.42 -50.10</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+        <item>
+            <title>2018-08-21: M=4.8 - 209 km W of Port Hardy, BC - offshore -
+                felt
+            </title>
+            <link>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180821.1310/index-en.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180821.1310/index-en.php
+            </guid>
+            <category>Earthquake Report</category>
+            <description>
+                <![CDATA[Earthquake 209 km W   of Port Hardy, BC - offshore   - felt  <br/><b>magnitude: </b>4.8<br/><b>time: </b>2018-08-21 13:10 UT<br/><b>latitude: </b>50.66&deg;<br/><b>longitude: </b>-130.47&deg;]]></description>
+            <pubDate>Tue, 21 Aug 2018 13:10:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>50.66 -130.47</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+        <item>
+            <title>2018-08-08: M=2.7 - 16 km SW of La Malbaie, QC - felt
+            </title>
+            <link>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180808.0850/index-en.php
+            </link>
+            <guid isPermaLink='true'>
+                http://www.earthquakescanada.nrcan.gc.ca/recent_eq/2018/20180808.0850/index-en.php
+            </guid>
+            <category>Earthquake Report</category>
+            <description>
+                <![CDATA[Earthquake 16 km SW  of La Malbaie, QC - felt  <br/><b>magnitude: </b>2.7<br/><b>time: </b>2018-08-08 08:50 UT<br/><b>latitude: </b>47.54&deg;<br/><b>longitude: </b>-70.29&deg;]]></description>
+            <pubDate>Wed, 08 Aug 2018 08:50:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>47.54 -70.29</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+
+    </channel>
+</rss>
+
