@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<rss version='2.0' xmlns:georss='http://www.georss.org/georss'
+     xmlns:gml='http://www.opengis.net/gml'
+     xmlns:atom='http://www.w3.org/2005/Atom'>
+    <channel>
+        <title>Recent significant earthquake reports ( Canada )</title>
+        <language>en-CA</language>
+        <item>
+            <title>Title 1</title>
+            <guid isPermaLink='true'>
+                1234
+            </guid>
+            <category>Category 1</category>
+            <description>
+                <![CDATA[Earthquake 32 km NNW of Yarmouth, NS  - felt  <br/><b>magnitude: </b>4.5<br/><b>time: </b>2018-09-29 13:32 UT<br/><b>latitude: </b>44.11&deg;<br/><b>longitude: </b>-66.23&deg;]]></description>
+            <pubDate>Sat, 29 Sep 2018 08:30:00 GMT</pubDate>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>44.11 -66.23</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+        <item>
+            <title>Title 2</title>
+            <guid isPermaLink='true'>
+                2345
+            </guid>
+            <category>Category 2</category>
+            <description>
+                <![CDATA[Earthquake 27 km ESE of Victoria, BC<br/><b>magnitude: </b>3.1<br/><b>time: </b>2018-09-09 12:55 UT<br/><b>latitude: </b>48.29&deg;<br/><b>longitude: </b>-123.06&deg;]]></description>
+            <georss:where>
+                <gml:Point>
+                    <gml:pos>48.29 -123.06</gml:pos>
+                </gml:Point>
+            </georss:where>
+        </item>
+    </channel>
+</rss>
