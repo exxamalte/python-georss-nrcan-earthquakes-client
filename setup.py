@@ -16,7 +16,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/exxamalte/python-georss-nrcan-earthquakes-client",
-    packages=find_packages(),
+    packages=find_packages(exclude=("tests*",)),
     classifiers=[
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
