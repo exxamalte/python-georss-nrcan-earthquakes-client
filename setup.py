@@ -11,7 +11,7 @@ DESCRIPTION = (
 URL = "https://github.com/exxamalte/python-georss-nrcan-earthquakes-client"
 
 REQUIRES = [
-    "georss_client>=0.14",
+    "georss_client>=0.15",
 ]
 
 with open("README.md", "r") as fh:
