@@ -1,23 +1,38 @@
+import os
+
 from setuptools import find_packages, setup
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+NAME = "georss_nrcan_earthquakes_client"
+AUTHOR = "Malte Franken"
+AUTHOR_EMAIL = "coding@subspace.de"
+DESCRIPTION = (
+    "A GeoRSS client library for the Natural Resources Canada Earthquakes feed."
+)
+URL = "https://github.com/exxamalte/python-georss-nrcan-earthquakes-client"
 
 REQUIRES = [
     "georss_client>=0.14",
 ]
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+HERE = os.path.abspath(os.path.dirname(__file__))
+VERSION = {}
+with open(os.path.join(HERE, NAME, "__version__.py")) as f:
+    exec(f.read(), VERSION)  # pylint: disable=exec-used
+
 setup(
-    name="georss_nrcan_earthquakes_client",
-    version="0.3",
-    author="Malte Franken",
-    author_email="coding@subspace.de",
-    description="A GeoRSS client library for the Natural Resources Canada Earthquakes feed.",
+    name=NAME,
+    version=VERSION["__version__"],
+    author=AUTHOR,
+    author_email=AUTHOR_EMAIL,
+    description=DESCRIPTION,
     license="Apache-2.0",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/exxamalte/python-georss-nrcan-earthquakes-client",
-    packages=find_packages(exclude=("tests*",)),
+    url=URL,
+    packages=find_packages(exclude=["tests"]),
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
