@@ -128,7 +128,7 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
 
         feed_entry = entries[1]
         assert feed_entry.title == "Title 2"
-        assert feed_entry.published is not None
+        assert feed_entry.published is None
 
     @mock.patch("requests.Request")
     @mock.patch("requests.Session")
