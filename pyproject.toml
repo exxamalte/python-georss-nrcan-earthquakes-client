@@ -1,7 +1,26 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "georss_nrcan_earthquakes_client"
 version  = "0.4"
-
+requires-python = ">= 3.10"
+authors = [
+  {name = "Malte Franken", email = "coding@subspace.de"},
+]
+description = "A GeoRSS client library for the Natural Resources Canada Earthquakes feed."
+readme = "README.md"
+license = "Apache-2.0"
+keywords = ["homeassistant", "georss", "nrcan", "earthquakes"]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Operating System :: OS Independent",
+  "Development Status :: 5 - Production/Stable",
+]
 dependencies = [
     "georss_client>=0.15",
 ]
@@ -13,6 +32,14 @@ tests = [
     "pytest-xdist",
     "pytest-cov",
 ]
+
+[project.urls]
+Repository = "https://github.com/exxamalte/python-georss-nrcan-earthquakes-client"
+Issues = "https://github.com/exxamalte/python-georss-nrcan-earthquakes-client/issues"
+Changelog = "https://github.com/exxamalte/python-georss-nrcan-earthquakes-client/blob/master/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+include = ["georss_nrcan_earthquakes_client*"]
 
 [tool.ruff.lint]
 select = [
