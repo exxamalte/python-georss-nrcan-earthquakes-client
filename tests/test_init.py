@@ -1,10 +1,12 @@
 """Test for the Natural Resources Canada Earthquakes feed."""
+
 import datetime
 import unittest
 from unittest import mock
 
 from georss_client import UPDATE_OK
 from georss_client.exceptions import GeoRssException
+import pytest
 
 from georss_nrcan_earthquakes_client import (
     NaturalResourcesCanadaEarthquakesFeed,
@@ -37,14 +39,14 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         )
         status, entries = feed.update()
         assert status == UPDATE_OK
-        self.assertIsNotNone(entries)
+        assert entries is not None
         assert len(entries) == 2
 
         feed_entry = entries[0]
         assert feed_entry.title == "Title 1"
         assert feed_entry.external_id == "1234"
         assert feed_entry.coordinates == (44.11, -66.23)
-        self.assertAlmostEqual(feed_entry.distance_to_home, 4272.4, 1)
+        assert round(abs(feed_entry.distance_to_home - 4272.4), 1) == 0
         assert feed_entry.published == datetime.datetime(
             2018, 9, 29, 8, 30, tzinfo=datetime.timezone.utc
         )
@@ -52,13 +54,12 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         assert feed_entry.magnitude == 4.5
         assert feed_entry.attribution == "Natural Resources Canada"
         assert (
-            repr(feed_entry) == "<NaturalResourcesCanadaEarthquakes"
-            "FeedEntry(id=1234)>"
+            repr(feed_entry) == "<NaturalResourcesCanadaEarthquakesFeedEntry(id=1234)>"
         )
 
         feed_entry = entries[1]
         assert feed_entry.title == "Title 2"
-        self.assertIsNone(feed_entry.published)
+        assert feed_entry.published is None
 
     @mock.patch("requests.Request")
     @mock.patch("requests.Session")
@@ -81,7 +82,7 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         )
         status, entries = feed.update()
         assert status == UPDATE_OK
-        self.assertIsNotNone(entries)
+        assert entries is not None
         assert len(entries) == 1
 
         feed_entry = entries[0]
@@ -107,14 +108,14 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         )
         status, entries = feed.update()
         assert status == UPDATE_OK
-        self.assertIsNotNone(entries)
+        assert entries is not None
         assert len(entries) == 2
 
         feed_entry = entries[0]
         assert feed_entry.title == "Title 1"
         assert feed_entry.external_id == "1234"
         assert feed_entry.coordinates == (44.11, -66.23)
-        self.assertAlmostEqual(feed_entry.distance_to_home, 4272.4, 1)
+        assert round(abs(feed_entry.distance_to_home - 4272.4), 1) == 0
         assert feed_entry.published == datetime.datetime(
             2018, 9, 29, 8, 30, tzinfo=datetime.timezone.utc
         )
@@ -122,13 +123,12 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         assert feed_entry.magnitude == 4.5
         assert feed_entry.attribution == "Ressources naturelles Canada"
         assert (
-            repr(feed_entry) == "<NaturalResourcesCanadaEarthquakes"
-            "FeedEntry(id=1234)>"
+            repr(feed_entry) == "<NaturalResourcesCanadaEarthquakesFeedEntry(id=1234)>"
         )
 
         feed_entry = entries[1]
         assert feed_entry.title == "Title 2"
-        self.assertIsNone(feed_entry.published)
+        assert feed_entry.published is not None
 
     @mock.patch("requests.Request")
     @mock.patch("requests.Session")
@@ -151,7 +151,7 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         )
         status, entries = feed.update()
         assert status == UPDATE_OK
-        self.assertIsNotNone(entries)
+        assert entries is not None
         assert len(entries) == 1
 
         feed_entry = entries[0]
@@ -160,7 +160,7 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
 
     def test_update_wrong_language(self):
         """Test invalid feed language."""
-        with self.assertRaises(GeoRssException):
+        with pytest.raises(GeoRssException):
             NaturalResourcesCanadaEarthquakesFeed(HOME_COORDINATES, "DOES NOT EXIST")
 
     @mock.patch("requests.Request")
@@ -204,7 +204,7 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         )
         feed_manager.update()
         entries = feed_manager.feed_entries
-        self.assertIsNotNone(entries)
+        assert entries is not None
         assert len(entries) == 2
         assert feed_manager.last_timestamp == datetime.datetime(
             2018, 9, 29, 8, 30, tzinfo=datetime.timezone.utc

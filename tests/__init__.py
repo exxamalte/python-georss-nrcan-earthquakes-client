@@ -1,4 +1,5 @@
 """Tests for georss-nrcan-earthquakes-client library."""
+
 import os
 
 

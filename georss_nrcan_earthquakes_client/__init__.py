@@ -1,10 +1,9 @@
-"""
-Natural Resources Canada Earthquakes Feed.
+"""Natural Resources Canada Earthquakes Feed.
 
 Fetches GeoRSS feed from Natural Resources Canada Earthquakes.
 """
+
 import logging
-from typing import Optional
 
 from georss_client import FeedEntry, GeoRssFeed
 from georss_client.consts import CUSTOM_ATTRIBUTE
@@ -15,7 +14,7 @@ _LOGGER = logging.getLogger(__name__)
 
 ATTRIBUTIONS = {"en": "Natural Resources Canada", "fr": "Ressources naturelles Canada"}
 
-REGEXP_ATTR_MAGNITUDE = "<b>magnitude: </b>(?P<{}>[^<]+)<br/>".format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_MAGNITUDE = f"<b>magnitude: </b>(?P<{CUSTOM_ATTRIBUTE}>[^<]+)<br/>"
 
 URL_PATTERN = (
     "http://www.earthquakescanada.nrcan.gc.ca/index-{}.php?"
@@ -69,17 +68,11 @@ class NaturalResourcesCanadaEarthquakesFeed(GeoRssFeed):
             self._filter_minimum_magnitude = filter_minimum_magnitude
         else:
             _LOGGER.error("Unknown feed language %s", language)
-            raise GeoRssException("Feed language must be one of %s".format(URLS.keys()))
+            raise GeoRssException("Feed language must be one of %s")
 
     def __repr__(self):
         """Return string representation of this feed."""
-        return "<{}(home={}, url={}, radius={}, magnitude={})>".format(
-            self.__class__.__name__,
-            self._home_coordinates,
-            self._url,
-            self._filter_radius,
-            self._filter_minimum_magnitude,
-        )
+        return f"<{self.__class__.__name__}(home={self._home_coordinates}, url={self._url}, radius={self._filter_radius}, magnitude={self._filter_minimum_magnitude})>"
 
     def _new_entry(self, home_coordinates, rss_entry, global_data):
         """Generate a new entry."""
@@ -95,8 +88,10 @@ class NaturalResourcesCanadaEarthquakesFeed(GeoRssFeed):
             # the value is equal or above the defined threshold.
             return list(
                 filter(
-                    lambda entry: entry.magnitude
-                    and entry.magnitude >= self._filter_minimum_magnitude,
+                    lambda entry: (
+                        entry.magnitude
+                        and entry.magnitude >= self._filter_minimum_magnitude
+                    ),
                     entries,
                 )
             )
@@ -117,7 +112,7 @@ class NaturalResourcesCanadaEarthquakesFeedEntry(FeedEntry):
         return self._attribution
 
     @property
-    def magnitude(self) -> Optional[float]:
+    def magnitude(self) -> float | None:
         """Return the type of this entry."""
         magnitude = self._search_in_description(REGEXP_ATTR_MAGNITUDE)
         if magnitude:
