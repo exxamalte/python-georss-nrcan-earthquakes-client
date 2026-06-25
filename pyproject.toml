@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "georss_nrcan_earthquakes_client"
 version  = "0.4"
-requires-python = ">= 3.10"
+requires-python = ">= 3.11"
 authors = [
   {name = "Malte Franken", email = "coding@subspace.de"},
 ]
@@ -17,7 +17,6 @@ readme = "README.md"
 license = "Apache-2.0"
 keywords = ["homeassistant", "georss", "nrcan", "earthquakes"]
 classifiers = [
-  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Operating System :: OS Independent",
