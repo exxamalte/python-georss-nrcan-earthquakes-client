@@ -17,10 +17,10 @@ class NaturalResourcesCanadaEarthquakesFeedManager(FeedManagerBase):
         generate_callback,
         update_callback,
         remove_callback,
-        coordinates,
-        language,
-        filter_radius=None,
-        filter_minimum_magnitude=None,
+        coordinates: tuple[float, float],
+        language: str,
+        filter_radius: float | None = None,
+        filter_minimum_magnitude: float | None = None,
     ):
         """Initialize the Natural Resources Canada Earthquakes Feed Manager."""
         feed = NaturalResourcesCanadaEarthquakesFeed(

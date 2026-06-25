@@ -16,10 +16,10 @@ class NaturalResourcesCanadaEarthquakesFeed(GeoRssFeed):
 
     def __init__(
         self,
-        home_coordinates,
-        language,
-        filter_radius=None,
-        filter_minimum_magnitude=None,
+        home_coordinates: tuple[float, float],
+        language: str,
+        filter_radius: float | None = None,
+        filter_minimum_magnitude: float | None = None,
     ):
         """Initialise this service."""
         if language in URLS:

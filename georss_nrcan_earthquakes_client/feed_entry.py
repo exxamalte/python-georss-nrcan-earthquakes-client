@@ -12,7 +12,7 @@ _LOGGER = logging.getLogger(__name__)
 class NaturalResourcesCanadaEarthquakesFeedEntry(FeedEntry):
     """Natural Resources Canada Earthquakes feed entry."""
 
-    def __init__(self, home_coordinates, attribution, rss_entry):
+    def __init__(self, home_coordinates: tuple[float, float], attribution, rss_entry):
         """Initialise this service."""
         super().__init__(home_coordinates, rss_entry)
         self._attribution = attribution
