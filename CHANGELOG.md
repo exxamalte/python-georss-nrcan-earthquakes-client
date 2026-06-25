@@ -1,5 +1,14 @@
 # Changes
 
+## 0.4 (17/02/2022)
+* No functional changes.
+* Migrated to github actions.
+* Added Python 3.10 support.
+* Removed Python 3.6 support.
+* Using version 0.15 of upstream [python-georss-client](https://github.com/exxamalte/python-georss-client) library.
+* Bumped library versions: black, flake8, isort.
+* Code clean-up.
+
 ## 0.3 (10/06/2021)
 * Add license tag (thanks @fabaff).
 * Added Python 3.9 support.
