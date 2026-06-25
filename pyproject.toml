@@ -18,6 +18,7 @@ license = "Apache-2.0"
 keywords = ["homeassistant", "georss", "nrcan", "earthquakes"]
 classifiers = [
   "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
   "Operating System :: OS Independent",
   "Development Status :: 5 - Production/Stable",
 ]
