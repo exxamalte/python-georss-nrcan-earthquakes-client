@@ -18,8 +18,8 @@ jobs:
       matrix:
         python-version: [ "3.10" ]
     steps:
-      - uses: "actions/checkout@v2"
-      - uses: "actions/setup-python@v2"
+      - uses: "actions/checkout@v7"
+      - uses: "actions/setup-python@v6"
         with:
           python-version: "${{ matrix.python-version }}"
       - name: "Install dependencies"
@@ -28,16 +28,25 @@ jobs:
           python -VV
           python -m site
           python -m pip install --upgrade pip setuptools wheel
-          python -m pip install --upgrade coverage[toml] virtualenv tox tox-gh-actions
-      - name: "Run tox targets for ${{ matrix.python-version }}"
-        run: "python -m tox"
-      - name: "Combine coverage"
-        if: "contains(env.USING_COVERAGE, matrix.python-version)"
+          python -m pip install -e .
+          python -m pip install -e .[tests]
+      - name: "Run tests for ${{ matrix.python-version }}"
         run: |
           set -xe
+          pytest \
+            -qq \
+            --timeout=9 \
+            --durations=10 \
+            -n auto \
+            --cov georss_nrcan_earthquakes_client \
+            --cov-report xml \
+            -o console_output_style=count \
+            -p no:sugar \
+            tests
           python -m coverage xml
       - name: "Upload coverage to Codecov"
         if: "contains(env.USING_COVERAGE, matrix.python-version)"
-        uses: "codecov/codecov-action@v1"
+        uses: "codecov/codecov-action@v7"
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
