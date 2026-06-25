@@ -8,8 +8,8 @@ from georss_client import UPDATE_OK
 from georss_client.exceptions import GeoRssException
 import pytest
 
-from georss_nrcan_earthquakes_client import (
-    NaturalResourcesCanadaEarthquakesFeed,
+from georss_nrcan_earthquakes_client.feed import NaturalResourcesCanadaEarthquakesFeed
+from georss_nrcan_earthquakes_client.feed_manager import (
     NaturalResourcesCanadaEarthquakesFeedManager,
 )
 from tests import load_fixture
@@ -48,7 +48,7 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         assert feed_entry.coordinates == (44.11, -66.23)
         assert round(abs(feed_entry.distance_to_home - 4272.4), 1) == 0
         assert feed_entry.published == datetime.datetime(
-            2018, 9, 29, 8, 30, tzinfo=datetime.timezone.utc
+            2018, 9, 29, 8, 30, tzinfo=datetime.UTC
         )
         assert feed_entry.category == "Category 1"
         assert feed_entry.magnitude == 4.5
@@ -117,7 +117,7 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         assert feed_entry.coordinates == (44.11, -66.23)
         assert round(abs(feed_entry.distance_to_home - 4272.4), 1) == 0
         assert feed_entry.published == datetime.datetime(
-            2018, 9, 29, 8, 30, tzinfo=datetime.timezone.utc
+            2018, 9, 29, 8, 30, tzinfo=datetime.UTC
         )
         assert feed_entry.category == "Category 1"
         assert feed_entry.magnitude == 4.5
@@ -207,7 +207,7 @@ class TestNaturalResourcesCanadaEarthquakesFeed(unittest.TestCase):
         assert entries is not None
         assert len(entries) == 2
         assert feed_manager.last_timestamp == datetime.datetime(
-            2018, 9, 29, 8, 30, tzinfo=datetime.timezone.utc
+            2018, 9, 29, 8, 30, tzinfo=datetime.UTC
         )
         assert len(generated_entity_external_ids) == 2
         assert len(updated_entity_external_ids) == 0

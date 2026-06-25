@@ -36,14 +36,17 @@ the actual data in the form of a list of specific feed entries.
 | Minimum Magnitude | `filter_minimum_magnitude` | Minimum magnitude as float value. Only events with a magnitude equal or above this value are included. |
 
 **Example**
+
 ```python
-from georss_nrcan_earthquakes_client import NaturalResourcesCanadaEarthquakesFeed
+
+from georss_nrcan_earthquakes_client.feed import NaturalResourcesCanadaEarthquakesFeed
+
 # Home Coordinates: Latitude: 49.25, Longitude: -123.1
 # Language: English
 # Filter radius: 200 km
 # Filter minimum magnitude: 4.0
-feed = NaturalResourcesCanadaEarthquakesFeed((49.25, -123.1), 
-                                             'en', 
+feed = NaturalResourcesCanadaEarthquakesFeed((49.25, -123.1),
+                                             'en',
                                              filter_radius=200,
                                              filter_minimum_magnitude=4.0)
 status, entries = feed.update()
