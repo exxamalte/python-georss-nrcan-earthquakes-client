@@ -23,7 +23,7 @@ classifiers = [
   "Development Status :: 5 - Production/Stable",
 ]
 dependencies = [
-    "georss_client>=0.15",
+    "georss_client>=2026.6.1",
 ]
 
 [project.optional-dependencies]
